@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\DataStrucure\bin\Debug\DataStrucure.exe.config
+C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\DataStrucure\bin\Debug\DataStrucure.exe
+C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\DataStrucure\bin\Debug\DataStrucure.pdb
+C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\DataStrucure\obj\Debug\DataStrucure.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\DataStrucure\obj\Debug\DataStrucure.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\DataStrucure\obj\Debug\DataStrucure.exe
+C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\DataStrucure\obj\Debug\DataStrucure.pdb
