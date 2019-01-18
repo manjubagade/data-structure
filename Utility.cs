@@ -10,10 +10,10 @@ namespace DataStrucure
     {
         public string FileForUnoderedList()
         {
-            string path= @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\underredList.txt";
+            string path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\underredList.txt";
             return path;
-        } 
-       public String ResultForUnderedlist()
+        }
+        public String ResultForUnderedlist()
         {
             String path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\ResultList.txt";
             return path;
@@ -28,5 +28,21 @@ namespace DataStrucure
             string path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\ResultListOrder.txt";
             return path;
         }
+        public int GetInt()
+        {
+            int n = Convert.ToInt32(Console.ReadLine()); 
+            return n;
+        }
+        
+        public double GetDouble()
+        {
+            Double d = Convert.ToDouble(Console.ReadLine());
+            return d;
+        }
+
+       
+              
+        
+    
     }
 }

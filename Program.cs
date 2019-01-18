@@ -15,6 +15,8 @@ namespace DataStrucure
             {
                 Console.WriteLine("PRESS 1 : FOR UNORDEREDLIST IN GIVEN FILE");
                 Console.WriteLine("PRESS 2  : FOR ORDEREdLIST IN GIVEN FILE");
+                Console.WriteLine("PRESS 3 : FOR BALANCED EXPRESSION");
+
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
                 {
@@ -25,6 +27,10 @@ namespace DataStrucure
                     case 2:
                         OrderedList ol = new OrderedList();
                         ol.AddAndSort();
+                        break;
+                    case 3:
+                        ArithmeticExp ax = new ArithmeticExp();
+                        ax.Airthexp();
                         break;
                 }
 
