@@ -16,6 +16,7 @@ namespace DataStrucure
                 Console.WriteLine("PRESS 1 : FOR UNORDEREDLIST IN GIVEN FILE");
                 Console.WriteLine("PRESS 2  : FOR ORDEREdLIST IN GIVEN FILE");
                 Console.WriteLine("PRESS 3 : FOR BALANCED EXPRESSION");
+                Console.WriteLine("PRESS 4 : FOR PALIDROME CHECKING");
 
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -32,6 +33,11 @@ namespace DataStrucure
                         ArithmeticExp ax = new ArithmeticExp();
                         ax.Airthexp();
                         break;
+                    case 4:
+                        PalidromeCheck pc = new PalidromeCheck();
+                        pc.PaliCheck();
+                        break;
+
                 }
 
                 Console.WriteLine("ENTER YES FOR Y AND NO FOR N");

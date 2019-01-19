@@ -33,7 +33,6 @@ namespace DataStrucure
             int n = Convert.ToInt32(Console.ReadLine()); 
             return n;
         }
-        
         public double GetDouble()
         {
             Double d = Convert.ToDouble(Console.ReadLine());
