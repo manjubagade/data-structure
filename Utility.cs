@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
+
 
 namespace DataStrucure
 {
@@ -28,9 +30,10 @@ namespace DataStrucure
             string path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\ResultListOrder.txt";
             return path;
         }
+
         public int GetInt()
         {
-            int n = Convert.ToInt32(Console.ReadLine()); 
+            int n = Convert.ToInt32(Console.ReadLine());
             return n;
         }
         public double GetDouble()
@@ -39,9 +42,54 @@ namespace DataStrucure
             return d;
         }
 
-       
-              
-        
-    
+        public int DayOfWeek(int year, int month)
+        {
+            string[] week = { "Sunday", "monday", "tuesday", "wednesday", "thrusday", "friday", "saturday" };
+            int y = year;
+            int m = month;
+            int d = 1;
+            int y0 = y - ((14 - m) / 12);
+            int x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
+            int m0 = m + (12 * ((14 - m) / 12)) - 2;
+            int d0 = (d + x + (31 * m0 / 12)) % 7;
+            return d0;
+
+        }
+
+        public ArrayList PrimeNum()
+        {
+            
+            ArrayList spn = new ArrayList();
+            ////this loop is used for taking the numbes from 1 to given range
+            for (int i = 1; i <= 1000; i++)
+            {
+                int count = 0;
+                ////this loop is used for dividing the i by the j up to given range
+                for (int j = 1; j <= 1000; j++)
+                {
+                    if ((i % j) == 0)
+                    {
+                        count++;
+                    }
+                }
+
+                if (count == 2)
+                {
+                    spn.Add(i);
+                }
+            }
+
+            return spn;
+        }
+
     }
-}
+ }
+
+
+
+
+
+
+
+
+

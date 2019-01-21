@@ -13,13 +13,12 @@ namespace DataStrucure
             LinkedList<int> ll = new LinkedList<int>();
             
             string names = System.IO.File.ReadAllText(util.FileForOrderedList());
-            string[] StrForNum = names.Split(' ');
+            string[] StrForNum = names.Split(',');
             Console.WriteLine("BEFORE SORTED THE ELEMENT IN GIVEN FILE");
             foreach (String list in StrForNum)
             {
                 Console.WriteLine(list);
-            }
-           
+            }  
             int[] StrToNum = Array.ConvertAll(StrForNum, int.Parse);
             Array.Sort(StrToNum);
             Console.WriteLine("AFTER SORTED THE ELEMENT IN FILE");
@@ -37,7 +36,7 @@ namespace DataStrucure
             Console.WriteLine("ENTER SEARCH FOR ELEMENT IN GIVEN FILE");
             try
             {
-                /////huyoghuiyghv 
+                /////huyoghuiyghv
                 int searnum = Convert.ToInt32(Console.ReadLine());
                
                 if (ll.Contains(searnum))

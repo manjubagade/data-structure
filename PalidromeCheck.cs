@@ -5,35 +5,36 @@ namespace DataStrucure
     using System;
     using System.Collections;
 
-    class PalidromeCheck
+    public class PalidromeCheck
     {
-
         public void PaliCheck()
-        { 
+        {
             Queue fqueue = new Queue();
             Queue squeue = new Queue();
             Console.WriteLine("ENTER THE STRING");
             string s = Console.ReadLine();
-            int Flag = 0;
-            char[] StrToChar = s.ToLower().ToCharArray();
-            int lenofchar = StrToChar.Length;
-            for(int i=0; i<lenofchar;i++)
+            int flag = 0;
+            char[] strToChar = s.ToLower().ToCharArray();
+            int lenofchar = strToChar.Length;
+            for (int i = 0; i < lenofchar; i++)
             {
-                fqueue.Enqueue(StrToChar[i]);
-            }
-            for(int i=lenofchar-1; i>=0;i--)
-            {
-                squeue.Enqueue(StrToChar[i]);
+                fqueue.Enqueue(strToChar[i]);
             }
 
-            while((fqueue.Count !=0) &&  (squeue.Count != 0))
+            for (int i = lenofchar - 1; i >= 0; i--)
             {
-                if((char)fqueue.Dequeue() != (char)squeue.Dequeue())
+                squeue.Enqueue(strToChar[i]);
+            }
+
+            while ((fqueue.Count != 0) && (squeue.Count != 0))
+            {
+                if ((char)fqueue.Dequeue() != (char)squeue.Dequeue())
                 {
-                    Flag++;
+                    flag++;
                 }
             }
-            if (Flag > 0)
+
+            if (flag > 0)
             {
                 Console.WriteLine("false");
             }
@@ -41,8 +42,6 @@ namespace DataStrucure
             {
                 Console.WriteLine("True");
             }
-
         }
-       
     }
 }
