@@ -10,6 +10,16 @@ namespace DataStrucure
 {
     class Utility
     {
+        /// <summary>
+        /// the queque object is created
+        /// </summary>
+        public Queue queue = new Queue();
+
+        /// <summary>
+        /// Files for taking input of unordered list.
+        /// </summary>
+        /// <returns>the path of a folder</returns>
+
         public string FileForUnoderedList()
         {
             string path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\underredList.txt";
@@ -22,7 +32,7 @@ namespace DataStrucure
         }
         public string FileForOrderedList()
         {
-            string path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\orderedList.txt";
+            string path = @"C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\orderedList.txt";
             return path;
         }
         public string ResultForlist()
@@ -55,35 +65,33 @@ namespace DataStrucure
             return d0;
 
         }
-
-        public ArrayList PrimeNum()
+             public ArrayList PrimeNum()
         {
-            
             ArrayList spn = new ArrayList();
-            ////this loop is used for taking the numbes from 1 to given range
+            ////looping the start from 1 to 1000
             for (int i = 1; i <= 1000; i++)
             {
                 int count = 0;
-                ////this loop is used for dividing the i by the j up to given range
+                ////looping from 1 to 1000
                 for (int j = 1; j <= 1000; j++)
                 {
+                    ////condition check i and j 
                     if ((i % j) == 0)
                     {
                         count++;
                     }
                 }
-
                 if (count == 2)
                 {
                     spn.Add(i);
                 }
             }
-
             return spn;
         }
 
+
     }
- }
+}
 
 
 

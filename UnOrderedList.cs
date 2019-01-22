@@ -22,9 +22,13 @@ namespace DataStrucure
         /// </summary>
         public void AddAndRemoveFile()  
         {
+            //// creating the utility object class
             Utility utility = new Utility();
+            //// creating the linked list object 
             LinkedList<String> ll = new LinkedList<string>();
+            //// creating one file path object 
             string text = System.IO.File.ReadAllText(utility.FileForUnoderedList());
+            //// spliting the text in spaces
             string[] word = text.Split(new char[] { ' ' });
             Console.WriteLine("Linked list for file");
             foreach(string list in word)
@@ -35,13 +39,14 @@ namespace DataStrucure
             {
                 Console.WriteLine(list);
             }
-            
+            //// check the length of character in text file
             Console.WriteLine("THE LENGTH  CHARATER IN FILE  "  +text.Length);
             Console.WriteLine("Enetr the String To the Search in  file");
             String search = Console.ReadLine();
 
             if (Regex.IsMatch(search.Replace(" ", string.Empty), @"^[a-zA-Z]+$"))
             {
+                //// searching the element in present in the file
                 if (ll.Contains(search))
                 {
                     Console.WriteLine("seaching the word contain in file and remove from file");

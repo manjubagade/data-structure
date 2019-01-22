@@ -8,11 +8,13 @@ namespace DataStrucure
     {
         public void AddAndSort()
         {
+            //// creating the utility object
             Utility util = new Utility();
-            
+            //// creating the linked list object 
             LinkedList<int> ll = new LinkedList<int>();
-            
+            //// take the path of file
             string names = System.IO.File.ReadAllText(util.FileForOrderedList());
+            //// string is spliting by the comma 
             string[] StrForNum = names.Split(',');
             Console.WriteLine("BEFORE SORTED THE ELEMENT IN GIVEN FILE");
             foreach (String list in StrForNum)
@@ -31,22 +33,24 @@ namespace DataStrucure
             {
                 Console.WriteLine(list);
             }
+            ////the check the total size of length of charater present in file
             Console.WriteLine("THE SIZE OF ELEMENT IN GIVEN FILE " + names.Length);
-
+            //// searching one particular element in given file
             Console.WriteLine("ENTER SEARCH FOR ELEMENT IN GIVEN FILE");
             try
             {
-                /////huyoghuiyghv
                 int searnum = Convert.ToInt32(Console.ReadLine());
-               
+               //// searching the elements in the file
                 if (ll.Contains(searnum))
                 {
                     Console.WriteLine("SEARCH ELEMENT CONTAIN IN THE FILE AND REMOVE FROM FILE");
+                    //// if the file is searching the remove from file
                     ll.Remove(searnum);
                 }
                 else
                 {
                     Console.WriteLine("SEARCH ELEMENT DO NOT IN FILE and ADDED IN THE FILE");
+                    //// if the file is not searching then add to the list
                     ll.AddLast(searnum);
                 }
                 foreach (int list in ll)
@@ -59,11 +63,10 @@ namespace DataStrucure
                     sw.WriteLine(resultString + " ");
                 }
             }
-            catch (System.FormatException e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-
             Console.ReadLine();
         }
     }

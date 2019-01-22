@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPrimeNumQueue.cs" />
+    <Compile Include="AddPrimeNumStack.cs" />
     <Compile Include="ArithmeticExp.cs" />
+    <Compile Include="Banking.cs" />
+    <Compile Include="BinarySearchTree.cs" />
     <Compile Include="Calender.cs" />
     <Compile Include="CalenderThouthQueue.cs" />
     <Compile Include="CalenderThouthStack.cs" />

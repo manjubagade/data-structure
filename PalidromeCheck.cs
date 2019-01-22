@@ -9,11 +9,15 @@ namespace DataStrucure
     {
         public void PaliCheck()
         {
+            //// creating first queue objects
             Queue fqueue = new Queue();
+            //// creating second queue objects
             Queue squeue = new Queue();
+            //// take the input from usr
             Console.WriteLine("ENTER THE STRING");
             string s = Console.ReadLine();
             int flag = 0;
+            //// string is converting into the tolower and character array
             char[] strToChar = s.ToLower().ToCharArray();
             int lenofchar = strToChar.Length;
             for (int i = 0; i < lenofchar; i++)

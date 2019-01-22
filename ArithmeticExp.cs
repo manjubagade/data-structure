@@ -9,30 +9,40 @@ namespace DataStrucure
     class ArithmeticExp
     {
         public void Airthexp()
-        { 
-            Utility u = new Utility();
-            Stack<char> sl = new Stack<char>();
-            Console.WriteLine("enter expression ");
-            string s1 = Console.ReadLine();
-            char[] ch = s1.ToCharArray();
-            for(int i=0; i<ch.Length;i++)
+        {
+            try
             {
-                if(ch[i]=='(')
+                //// creating one utility object
+                Utility u = new Utility();
+                //// creating one stack objects 
+                Stack<char> sl = new Stack<char>();
+                Console.WriteLine("enter expression ");
+                string s1 = Console.ReadLine();
+                //// string is converting into the charater array
+                char[] ch = s1.ToCharArray();
+                for (int i = 0; i < ch.Length; i++)
                 {
-                    sl.Push(ch[i]);
+                    if (ch[i] == '(')
+                    {
+                        sl.Push(ch[i]);
+                    }
+                    else if (ch[i] == ')')
+                    {
+                        sl.Pop();
+                    }
                 }
-                else if(ch[i]==')')
+                if (sl.Count == 0)
                 {
-                    sl.Pop();
+                    Console.WriteLine("Balanced expression");
+                }
+                else
+                {
+                    Console.WriteLine("Expression is not Balance Expressin");
                 }
             }
-            if(sl.Count == 0)
+            catch(Exception e)
             {
-                Console.WriteLine("Balanced expression");
-            }
-            else
-            {
-                Console.WriteLine("Expression is not Balance Expressin");
+                Console.WriteLine(e.Message);
             }
         }
     }

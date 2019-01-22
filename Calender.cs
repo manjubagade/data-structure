@@ -14,13 +14,12 @@ namespace DataStrucure
             Utility util = new Utility();
             int year = 0;
             int month = 0;
-           
-                Console.WriteLine("ENTER THE YEAR ");
-                ////take the input from user for year
-                year = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("ENTER THE MONTH OF YEAR");
-                ////take the input from user for month
-                month = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ENTER THE YEAR ");
+            ////take the input from user for year
+            year = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ENTER THE MONTH OF YEAR");
+            ////take the input from user for month
+            month = Convert.ToInt32(Console.ReadLine());
             if (month >= 1 && month <= 12 && year >= 1000 && year <= 9999)
             {
                 ////creating 2 dimestional array store the days
@@ -36,7 +35,6 @@ namespace DataStrucure
                 { 
                     days[2] = 29;
                 }
-
                 int date = 01;
                  //// First rows of days 
                 for (int i = sdate; i < cale.GetLength(1); i++)
