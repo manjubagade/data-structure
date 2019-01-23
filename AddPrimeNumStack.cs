@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="AddPrimeNumStack.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-    class AddPrimeNumStack
+    using System;
+    using System.Collections;
+
+    /// <summary>
+    /// finding the prime number anagram using sytack
+    /// </summary>
+    public  class AddPrimeNumStack
     {
+        /// <summary>
+        /// this is primenumberanagram using stack this instance
+        /// </summary>
+        
         public void AddAnagramStack()
         {
             //// creating one utilty objects
@@ -27,7 +34,7 @@ namespace DataStrucure
                 Array.Sort(num11);
                 string s1 = new string(num11);
                 //// looping the 0 to 1000
-                for (int j = i + 1; j < pnum.Count; j++)
+                for (int j = i + 1; j < pnum.Count; j++) 
                 {
                     string num2 = pnum[j] + string.Empty;
                     ////string array is converting into the char arrays

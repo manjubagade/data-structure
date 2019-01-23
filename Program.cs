@@ -1,14 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="Program.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-    class Program
+    using System;
+
+
+    /// <summary>
+    /// this class is used to run all the programs
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Defines the entry point of the application
+        /// </summary>
+        /// <param name="args">The arguments.</param>
+     public static void Main(string[] args)
         {
             try
             {
@@ -90,12 +99,10 @@ namespace DataStrucure
                 }
                 while (flag == 'y' || flag == 'Y');
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
         }
     }
 }
-
-       

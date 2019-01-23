@@ -1,14 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="BinarySearchTree.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-    class BinarySearchTree
-    { 
-              public long Factorial(int n)
+    using System;
+
+    /// <summary>
+    /// this class is used to run all the programs
+    /// </summary>
+     public class BinarySearchTree
+    {
+        /// <summary>
+        /// Defines the entry point of the application
+        /// </summary>
+        /// <param name="args">The arguments.</param>
+        public long Factorial(int n)
         {
             ////declaring result variable store the factorial results
             long result = 1;
@@ -27,6 +35,7 @@ namespace DataStrucure
         /// count binary search tree method will calculate the number of binary search tree
         /// </summary>
         /// <param name="n"> integer </param>
+        
         public void CountBst(int n)
         {
             try
@@ -35,7 +44,7 @@ namespace DataStrucure
                 long count = this.Factorial(2 * n) / (this.Factorial(n + 1) * this.Factorial(n));
                 Console.WriteLine("Number OF BINARY SEARCH IS  " + count);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }

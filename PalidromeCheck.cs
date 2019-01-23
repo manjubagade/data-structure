@@ -1,12 +1,21 @@
-﻿using System;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="PalidromeCheck.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
     using System;
     using System.Collections;
 
+    /// <summary>
+    /// finding the palindrome program using queue 
+    /// </summary>
     public class PalidromeCheck
     {
+        /// <summary>
+        /// palindrome this instance
+        /// </summary>
         public void PaliCheck()
         {
             //// creating first queue objects

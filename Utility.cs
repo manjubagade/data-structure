@@ -1,20 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-
-
+﻿//-----------------------------------------------------------------------
+// <copyright file=" Utility.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-    class Utility
+    using System;
+    using System.Collections;
+
+    /// <summary>
+    /// this class is used to run all the programs
+    /// </summary>
+
+   public class Utility
     {
         /// <summary>
-        /// the queque object is created
+        /// the queue object is created
         /// </summary>
         public Queue queue = new Queue();
-
         /// <summary>
         /// Files for taking input of unordered list.
         /// </summary>
@@ -25,16 +28,19 @@ namespace DataStrucure
             string path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\underredList.txt";
             return path;
         }
-        public String ResultForUnderedlist()
+
+        public string ResultForUnderedlist()
         {
-            String path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\ResultList.txt";
+            string path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\ResultList.txt";
             return path;
         }
+
         public string FileForOrderedList()
         {
             string path = @"C:\Users\Admin\Desktop\manjupgm\DataStructure\DataStrucure\orderedList.txt";
             return path;
         }
+
         public string ResultForlist()
         {
             string path = @"C:\Users\Admin\Desktop\manjupgm\Algorithms\Algorithmspgm\ResultListOrder.txt";
@@ -46,9 +52,10 @@ namespace DataStrucure
             int n = Convert.ToInt32(Console.ReadLine());
             return n;
         }
+
         public double GetDouble()
         {
-            Double d = Convert.ToDouble(Console.ReadLine());
+            double d = Convert.ToDouble(Console.ReadLine());
             return d;
         }
 
@@ -67,6 +74,7 @@ namespace DataStrucure
         }
              public ArrayList PrimeNum()
         {
+            //// creating the arraylist objects
             ArrayList spn = new ArrayList();
             ////looping the start from 1 to 1000
             for (int i = 1; i <= 1000; i++)
@@ -92,12 +100,3 @@ namespace DataStrucure
 
     }
 }
-
-
-
-
-
-
-
-
-

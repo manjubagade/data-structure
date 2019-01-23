@@ -12,9 +12,11 @@ namespace DataStrucure
     using System.Text;
     using System.Text.RegularExpressions;
     using System.Threading.Tasks;
+
     /// <summary>
-    /// the class name  should be underedlist
+    /// the class name  should be unoderedlist
     /// </summary>
+    
       public class UnOrderedList
       {
         /// <summary>
@@ -25,24 +27,26 @@ namespace DataStrucure
             //// creating the utility object class
             Utility utility = new Utility();
             //// creating the linked list object 
-            LinkedList<String> ll = new LinkedList<string>();
+            LinkedList<string> ll = new LinkedList<string>();
             //// creating one file path object 
             string text = System.IO.File.ReadAllText(utility.FileForUnoderedList());
             //// spliting the text in spaces
             string[] word = text.Split(new char[] { ' ' });
-            Console.WriteLine("Linked list for file");
-            foreach(string list in word)
+            Console.WriteLine("LINKED LIST FILE");
+            foreach (string list in word)
             {
                 ll.AddLast(list);
             }
-            foreach(string list in ll)
+
+            foreach (string list in ll)
             {
                 Console.WriteLine(list);
             }
-            //// check the length of character in text file
-            Console.WriteLine("THE LENGTH  CHARATER IN FILE  "  +text.Length);
+
+            //// check the length of character in text file 
+            Console.WriteLine("THE LENGTH  CHARATER IN FILE  "  + text.Length);
             Console.WriteLine("Enetr the String To the Search in  file");
-            String search = Console.ReadLine();
+            string search = Console.ReadLine();
 
             if (Regex.IsMatch(search.Replace(" ", string.Empty), @"^[a-zA-Z]+$"))
             {
@@ -62,7 +66,8 @@ namespace DataStrucure
             {
                 Console.WriteLine("FILE ONLY CHARATER AND LETTER ACCEPERD");
             }
-            foreach(string list in ll)
+
+            foreach (string list in ll)
             {
                 Console.WriteLine(list);
             }

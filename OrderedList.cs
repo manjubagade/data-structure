@@ -1,11 +1,23 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+﻿//-----------------------------------------------------------------------
+// <copyright file=" OrderedList.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-    class OrderedList
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+
+
+    /// <summary>
+    /// this class is sorting the number from files
+    /// </summary>
+    public class OrderedList
     {
+        /// <summary>
+        /// orderedklist in given file this instance.
+        /// </summary>
         public void AddAndSort()
         {
             //// creating the utility object
@@ -15,16 +27,16 @@ namespace DataStrucure
             //// take the path of file
             string names = System.IO.File.ReadAllText(util.FileForOrderedList());
             //// string is spliting by the comma 
-            string[] StrForNum = names.Split(',');
+            string[] strForNum = names.Split(',');
             Console.WriteLine("BEFORE SORTED THE ELEMENT IN GIVEN FILE");
-            foreach (String list in StrForNum)
+            foreach (String list in strForNum)
             {
                 Console.WriteLine(list);
             }  
-            int[] StrToNum = Array.ConvertAll(StrForNum, int.Parse);
-            Array.Sort(StrToNum);
+            int[] strToNum = Array.ConvertAll(strForNum, int.Parse);
+            Array.Sort(strToNum);
             Console.WriteLine("AFTER SORTED THE ELEMENT IN FILE");
-            foreach (int list in StrToNum)
+            foreach (int list in strToNum)
             {
                 ll.AddLast(list);
             }

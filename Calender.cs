@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="Calender.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
+    using System;
+
+    /// <summary>
+    /// finding the weeks of days using the 2 d arrays 
+    /// </summary>
     public class Calender
     {
+        /// <summary>
+        /// this weeks of days this instance
+        /// </summary>
         public void Cal()
         {
             ////creating one utility object  
@@ -23,7 +30,7 @@ namespace DataStrucure
             if (month >= 1 && month <= 12 && year >= 1000 && year <= 9999)
             {
                 ////creating 2 dimestional array store the days
-                int[,] cale= new int[6, 7];
+                int[,] cale = new int[6, 7];
                 ////creating the array that stores the names of a months 
                 string[] months = { "", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
                 ////storing the day of a month in to an array

@@ -1,14 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="ArithmeticExp.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-    class ArithmeticExp
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// finding the balance expressetion true or false
+    /// </summary>
+  public class ArithmeticExp
     {
-        public void Airthexp()
+        /// <summary>
+        /// this airthmetic expressetion using balance this instance
+        /// </summary>
+      public void Airthexp()
         {
             try
             {
@@ -40,7 +48,7 @@ namespace DataStrucure
                     Console.WriteLine("Expression is not Balance Expressin");
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }

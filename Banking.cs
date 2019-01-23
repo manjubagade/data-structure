@@ -1,18 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="Banking.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
- public  class Banking
+    using System;
+    using System.Collections;
+
+    /// <summary>
+    /// this program is banking cash systems
+    /// </summary>
+    public class Banking
     {
         private Queue queue = new Queue();
         private int totalCash = 10000;
         private int count = 0;
+        /// <summary>
+        /// banking system thin instance
+        /// </summary>
         public void BankOperations()
         {
                 ////ch variable is used inside the do while loop to stop the execution of program
@@ -58,7 +64,7 @@ namespace DataStrucure
         }
          public void AddCustomer()
         {
-                Console.WriteLine("ENTER THE SIZE OF CUSTOMER NMAE TO BE ADDED");
+                Console.WriteLine("ENTER THE SIZE OF CUSTOMER NAME TO BE ADDED");
                 int cust = Convert.ToInt32(Console.ReadLine());
                 for (int i = 1; i <= cust; i++)
                 {

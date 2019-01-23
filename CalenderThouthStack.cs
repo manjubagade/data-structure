@@ -1,13 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="CalenderThouthStack.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-    class CalenderThouthStack
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// finding the weeks of days program calender using stack
+    /// </summary>
+   public class CalenderThouthStack
     {
+        /// <summary>
+        /// weeks of days using stack this instance
+        /// </summary>
         public void StackImp()
         {
             ////creating the object class 
@@ -20,13 +28,12 @@ namespace DataStrucure
             Queue<int> queue = new Queue<int>();
             int year = 0;
             int month = 0;
-           
-                Console.WriteLine("enter year");
-                ////taking the input of a year from user
-                year = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("enter month");
-                ////taking the input month from the user
-                month = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ENTER THE YEAR");
+           ////taking the input of a year from user
+           year = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("ENTER THE MONTH");
+           ////taking the input month from the user
+           month = Convert.ToInt32(Console.ReadLine());
             if (month >= 1 && month <= 12 && year >= 1000 && year <= 9999)
             {
                 int[] days = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -48,24 +55,18 @@ namespace DataStrucure
 
                 while (days[month] >= date)
                 {
-                   
                     for (int i = 0; i < 7; i++)
                     {
-                       
                         if (date <= days[month])
                         {
-                            
                             queue.Enqueue(date);
-                           
                             date++;
                         }
                     }
                     
                     stack.Push(queue);
-                   
                     queue = new Queue<int>();
                 }
-
                 Console.WriteLine("sun \tmon \ttue \twed \tthr \tfri \tsat");
                 for (int i = 1; i <= sdate; i++)
                 {
@@ -82,13 +83,10 @@ namespace DataStrucure
                     {
                         Console.Write(item + "\t");
                     }
-
                     Console.WriteLine();
                 }
-
                 Console.ReadLine();
             }
-           
         }
     }
 }

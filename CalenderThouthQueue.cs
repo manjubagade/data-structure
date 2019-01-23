@@ -1,19 +1,26 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="CalenderThouthQueue.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-    class CalenderThouthQueue
-    {
+    using System;
+    using System.Collections;
+
+    /// <summary>
+    /// finding the weeks of days using the queue
+    /// </summary>
+     public class CalenderThouthQueue
+      {
+        /// <summary>
+        /// this weekofdays using the queue this instance
+        /// </summary>
         public void CalToQue()
         { ////creating The queue object
-            Queue mQueue = new Queue();
+            Queue mqueue = new Queue();
             ////creating the object of a queue
-            Queue sQueue = new Queue();
+            Queue squeue = new Queue();
             ////creating the object of utility class
             Utility utility = new Utility();
             int year = 0;
@@ -27,40 +34,40 @@ namespace DataStrucure
             if (month >= 1 && month <= 12 && year >= 1000 && year <= 9999)
             {
                 int[] days = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };  
-                int sDate = utility.DayOfWeek(year, month);
+                int sdate = utility.DayOfWeek(year, month);
                 if ((month == 2) && (year % 4 == 0))
                 {
                     days[2] = 29;
                 }
                 int date = 01;
-                for (int i = sDate; i < 7; i++)
+                for (int i = sdate; i < 7; i++)
                 {
-                    sQueue.Enqueue(date);
+                    squeue.Enqueue(date);
                     date++;
                 }
-                mQueue.Enqueue(sQueue);
-                sQueue = new Queue();
+                mqueue.Enqueue(squeue);
+                squeue = new Queue();
                 while (days[month] >= date)
                 {
                     for (int i = 0; i < 7; i++)
                     {                    
                         if (date <= days[month])
                         {
-                            sQueue.Enqueue(date);  
+                            squeue.Enqueue(date);  
                             date++;
                         }
                     }
-                    mQueue.Enqueue(sQueue);
-                    sQueue = new Queue();
+                    mqueue.Enqueue(squeue);
+                    squeue = new Queue();
                 }
                 Console.WriteLine("sun \tmon \ttue \twed \tthr \tfri \tsat");
-                for (int i = 1; i <= sDate; i++)
+                for (int i = 1; i <= sdate; i++)
                 {
                     Console.Write("\t");
                 }
-                while (mQueue.Count != 0)
+                while (mqueue.Count != 0)
                 {
-                    Queue queue = (Queue)mQueue.Dequeue();
+                    Queue queue = (Queue)mqueue.Dequeue();
                     foreach (int obj in queue)
                     {
                         Console.Write(obj + "\t");

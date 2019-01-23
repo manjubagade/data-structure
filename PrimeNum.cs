@@ -1,31 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrimeNum.cs" company="Bridgelabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DataStrucure
 {
-  public class PrimeNum
+    using System;
+    using System.Collections;
+
+
+    /// <summary>
+    /// this class prime number of print 0 to 1000
+    /// </summary>
+
+
+    public class PrimeNum
     {
+        /// <summary>
+        /// Define the method of primenumbers 
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         public void PrimeNum1()
         {
             Utility util = new Utility();
             ArrayList primeNums = util.PrimeNum();
             int[,] pnr = new int[10, 25];
-            int startindex = 0;
+            int sindex = 0;
             int range1 = 0;
             int range2 = 100;
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j <= pnr.GetLength(1); j++)
                 {
-                    
-                        if (startindex < primeNums.Count && ((int)primeNums[startindex] > range1) && ((int)primeNums[startindex] <= range2))
+                        if (sindex < primeNums.Count && ((int)primeNums[sindex] > range1) && ((int)primeNums[sindex] <= range2))
                         {
-                            pnr[i, j] = (int)primeNums[startindex];
-                            startindex++;
+                            pnr[i, j] = (int)primeNums[sindex];
+                            sindex++;
                         }
                 }
 
