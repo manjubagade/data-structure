@@ -20,10 +20,12 @@ namespace DataStrucure
         {
             try
             {
+                int count = 0;
                 //// creating one utility object
                 Utility u = new Utility();
                 //// creating one stack objects 
-                Stack<char> sl = new Stack<char>();
+               //// Stack<char> sl = new Stack<char>();
+                LinkedListClass list = new LinkedListClass();
                 Console.WriteLine("enter expression ");
                 string s1 = Console.ReadLine();
                 //// string is converting into the charater array
@@ -32,14 +34,14 @@ namespace DataStrucure
                 {
                     if (ch[i] == '(')
                     {
-                        sl.Push(ch[i]);
+                        list.Push(ch[i]);
                     }
                     else if (ch[i] == ')')
                     {
-                        sl.Pop();
+                        list.Pop();
                     }
                 }
-                if (sl.Count == 0)
+                if (list.Equals(s1))
                 {
                     Console.WriteLine("Balanced expression");
                 }

@@ -18,6 +18,8 @@ namespace DataStrucure
         /// </summary>
         public void PaliCheck()
         {
+            LinkedListClass linklist1 = new LinkedListClass();
+            LinkedListClass linklist2=new LinkedListClass();
             //// creating first queue objects
             Queue fqueue = new Queue();
             //// creating second queue objects

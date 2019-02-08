@@ -42,7 +42,6 @@ namespace DataStrucure
                 {
                     days[2] = 29;
                 }
-
                 int date = 01;
                 for (int i = sdate; i < 7; i++)
                 {

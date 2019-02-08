@@ -36,6 +36,11 @@ namespace DataStrucure
                     Console.WriteLine("PRESS 10: FOR PRIME NUMBER ANAGRAM USING STACK");
                     Console.WriteLine("PRESS 11: FOR PRIME NUMBER ANAGRAM USING QUEUE");
                     Console.WriteLine("PRESS 12: FOR BINARY SEARCH TREE ");
+                    Console.WriteLine("PRESS 13: FOR HASHING");
+                    Console.WriteLine("PRESS 14 balance expression");
+                    Console.WriteLine("Presss 15 prime anagram using stack");
+                    Console.WriteLine("PRESS 16 prime anagram using queue");
+
 
                     int num = Convert.ToInt32(Console.ReadLine());
                     switch (num)
@@ -90,7 +95,22 @@ namespace DataStrucure
                             int number = Convert.ToInt32(Console.ReadLine());
                             bst.CountBst(number);
                             break;
-
+                        case 13:
+                            HashMap h = new HashMap();
+                            h.StoringAndRetrievingNumbers();
+                            break;
+                        case 14:
+                            Balance b = new Balance();
+                            b.BalancedParenthesisDemo();
+                            break;
+                        case 15:
+                            PrimeAnagramStack pnr = new PrimeAnagramStack();
+                            pnr.PrimeAnagramStackDemo();
+                            break;
+                        case 16:
+                            PrimeAnagramQueue prq = new PrimeAnagramQueue();
+                            prq.PrimeAnagramQueueDemo();
+                            break;
 
                     }
 

@@ -42,8 +42,6 @@ namespace DataStrucure
                 range1 = range1 + 100;
                 range2 = range2 + 100;
             }
-
-           
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < pnr.GetLength(1); j++)

@@ -27,16 +27,18 @@ namespace DataStrucure
             //// creating the utility object class
             Utility utility = new Utility();
             //// creating the linked list object 
+            LinkedListClass ll1 = new LinkedListClass();
             LinkedList<string> ll = new LinkedList<string>();
             //// creating one file path object 
-            string text = System.IO.File.ReadAllText(utility.FileForUnoderedList());
+            string text = File.ReadAllText(utility.FileForUnoderedList());
             //// spliting the text in spaces
             string[] word = text.Split(new char[] { ' ' });
             Console.WriteLine("LINKED LIST FILE");
             foreach (string list in word)
             {
-                ll.AddLast(list);
+                ll1.AddFirst(list);
             }
+            ll1.Print();
 
             foreach (string list in ll)
             {
@@ -44,7 +46,7 @@ namespace DataStrucure
             }
 
             //// check the length of character in text file 
-            Console.WriteLine("THE LENGTH  CHARATER IN FILE  "  + text.Length);
+            Console.WriteLine("THE LENGTH  CHARATER IN FILE  " + text.Length);
             Console.WriteLine("Enetr the String To the Search in  file");
             string search = Console.ReadLine();
 
@@ -71,13 +73,12 @@ namespace DataStrucure
             {
                 Console.WriteLine(list);
             }
-          
+
             string resultStr = string.Join(" ", ll);
             using (StreamWriter streamWriter = new StreamWriter(utility.ResultForUnderedlist()))
             {
                 streamWriter.WriteLine(resultStr + " ");
             }
-
             Console.ReadLine();
         }
     }
